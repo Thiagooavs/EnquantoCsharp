@@ -13,7 +13,12 @@ namespace EnquantoCsharp
         {
             
             int cont = 0;
+            
+            
+            
             /* Conta usando case
+            
+            
             while (cont == 0)
             {
                 Console.Write("Escolha uma operação(+, -, /, *): ");
@@ -84,6 +89,13 @@ namespace EnquantoCsharp
 
             Console.ReadKey();
             */
+
+            
+            
+            
+            
+            /*Area de formas geométricas de 2 dimenções (wilhe e case)
+            
             while (cont == 0)
             {
                 
@@ -101,7 +113,7 @@ namespace EnquantoCsharp
                         Console.Write("Digite o valor do lado: ");
                         double L = double.Parse(Console.ReadLine());
                         double area = L * L;
-                        Console.WriteLine("A área do quadrado é: " + area);
+                        Console.WriteLine("A área do quadrado é: ");
                         cont = 1;
                         break;
 
@@ -144,6 +156,9 @@ namespace EnquantoCsharp
                 }
             }
             Console.ReadKey();
+            */
+
+
 
         }
     }
