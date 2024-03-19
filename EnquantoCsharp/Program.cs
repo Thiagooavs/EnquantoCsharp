@@ -13,10 +13,11 @@ namespace EnquantoCsharp
         {
             
             int cont = 0;
-            
-            
-            
+
+
+
             /* Conta usando case
+           
             
             
             while (cont == 0)
@@ -90,11 +91,11 @@ namespace EnquantoCsharp
             Console.ReadKey();
             */
 
+
+
+            /* Calcular a area de uma forma geométrica (while/case)
             
             
-            
-            
-            /*Area de formas geométricas de 2 dimenções (wilhe e case)
             
             while (cont == 0)
             {
@@ -158,8 +159,74 @@ namespace EnquantoCsharp
             Console.ReadKey();
             */
 
+            
+            
+            double sala = 0;
 
+            while (cont == 0)
+            {
 
+                Console.WriteLine("Como você ganha dinheiro: ");
+                Console.WriteLine("1- Assalariado");
+                Console.WriteLine("2- Comissionado ");
+                Console.WriteLine("3- Horista ");
+                Console.Write("Escolha: ");
+                int caso = int.Parse(Console.ReadLine());
+
+                switch (caso)
+                {
+                    case 1:
+                        Console.Write("Digite o salário bruto: R$");
+                        double bruto = double.Parse(Console.ReadLine());
+                        Console.Write("digite o desconto: R$");
+                        double des = double.Parse(Console.ReadLine());
+                        cont = 1;
+                        sala = bruto - des;
+
+                       
+                        break;
+
+                    case 2:
+                        Console.Write("Digite Quantas unidades você vendeu:");
+                        int quant = int.Parse(Console.ReadLine());
+                        Console.Write("digite o valor por cada unidade: R$");
+                        double valor = double.Parse(Console.ReadLine());
+                        cont = 1;
+                        sala = quant * valor;
+                        break;
+
+                    case 3:
+                        Console.Write("Digite quantas horas trabalhou: ");
+                        int hora = int.Parse(Console.ReadLine());
+                        Console.Write("digite o dvalor por hora: R$");
+                        valor = double.Parse(Console.ReadLine());
+                        cont = 1;
+                        sala = hora * valor;
+                        break;
+
+                    default:
+                        Console.WriteLine("Trabalho invalido, tente denovo");
+                        Console.ReadKey();
+                        break;
+                }
+            }
+            if (sala <= 2000)
+            {
+                double ir = sala * 0.075;
+                Console.WriteLine("Você pagará " + ir.ToString("C") + " de IR(7,5%)");
+            }
+            else if (sala <= 4000)
+            {
+                double ir = sala * 0.12;
+                Console.WriteLine("Você pagará " + ir.ToString("C") + " de IR(12%)");
+            }
+            else
+            {
+                double ir = sala * 0.15;
+                Console.WriteLine("Você pagará " + ir.ToString("C") + " de IR(15%)");
+            }
+
+            Console.ReadKey (); 
         }
     }
 }
